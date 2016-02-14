@@ -1,0 +1,36 @@
+{description, "Rebar3 Riak Core Application"}.
+{variables, [
+    {name, "myrcore", "Name of the application"},
+    {desc, "A Riak Core Application", "Short description of the app"},
+    {meta_vm_args_path, "{{output_dir}}/releases/{{release_version}}/vm.args", "Internal, ignore"}
+]}.
+
+{template, "rebar3_riak_core.app.src.tpl", "{{name}}/apps/{{name}}/src/{{name}}.app.src"}.
+{template, "rebar3_riak_core.erl.tpl", "{{name}}/apps/{{name}}/src/{{name}}.erl"}.
+{template, "rebar3_riak_core_app.erl.tpl", "{{name}}/apps/{{name}}/src/{{name}}_app.erl"}.
+{template, "rebar3_riak_core_sup.erl.tpl", "{{name}}/apps/{{name}}/src/{{name}}_sup.erl"}.
+{template, "rebar3_riak_core_console.erl.tpl", "{{name}}/apps/{{name}}/src/{{name}}_console.erl"}.
+{template, "rebar3_riak_core_vnode.erl.tpl", "{{name}}/apps/{{name}}/src/{{name}}_vnode.erl"}.
+{template, "rebar3_riak_core_rebar.config.tpl", "{{name}}/rebar.config"}.
+{template, "rebar3_riak_core_editorconfig.tpl", "{{name}}/.editorconfig"}.
+{template, "rebar3_riak_core_gitignore.tpl", "{{name}}/.gitignore"}.
+{template, "rebar3_riak_core_README.rst.tpl", "{{name}}/README.rst"}.
+{template, "rebar3_riak_core_Makefile.tpl", "{{name}}/Makefile"}.
+
+{file, "rebar3_riak_core_nodetool", "{{name}}/config/nodetool"}.
+{file, "rebar3_riak_core_extended_bin", "{{name}}/config/extended_bin"}.
+{template, "rebar3_riak_core_admin_runner", "{{name}}/config/admin_bin"}.
+{template, "rebar3_riak_core_config.schema.tpl", "{{name}}/config/config.schema"}.
+{template, "rebar3_riak_core_advanced.config.tpl", "{{name}}/config/advanced.config"}.
+{template, "rebar3_riak_core_sys.config.tpl", "{{name}}/config/sys.config"}.
+{template, "rebar3_riak_core_vars.config.tpl", "{{name}}/config/vars.config"}.
+{template, "rebar3_riak_core_vars_dev1.config.tpl", "{{name}}/config/vars_dev1.config"}.
+{template, "rebar3_riak_core_vars_dev2.config.tpl", "{{name}}/config/vars_dev2.config"}.
+{template, "rebar3_riak_core_vars_dev3.config.tpl", "{{name}}/config/vars_dev3.config"}.
+{template, "rebar3_riak_core_vm.args.tpl", "{{name}}/config/vm.args"}.
+{template, "rebar3_riak_core_dev1_vm.args.tpl", "{{name}}/config/dev1_vm.args"}.
+{template, "rebar3_riak_core_dev2_vm.args.tpl", "{{name}}/config/dev2_vm.args"}.
+{template, "rebar3_riak_core_dev3_vm.args.tpl", "{{name}}/config/dev3_vm.args"}.
+
+{chmod, "{{name}}/config/extended_bin", 8#744}.
+{chmod, "{{name}}/config/admin_bin", 8#744}.
