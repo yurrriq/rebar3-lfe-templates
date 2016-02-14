@@ -15,14 +15,10 @@ to copy the templates to `$HOME/.config/rebar3/templates`.
 
 ## Use
 
-There are three templates:
-
 -   [`lfe-app`](lfe-app)
 -   [`lfe-lib`](lfe-lib)
 -   [`lfe-release`](lfe-release)
 -   [`lfe-unit-test`](lfe-unit-test)
-
-They all mimic the [default rebar3 templates](https://github.com/rebar/rebar3/tree/master/priv/templates).
 
 ```fish
 rebar3 new lfe-app name=my-new-app

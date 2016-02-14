@@ -26,13 +26,11 @@ make install
 to copy the templates to =$HOME/.config/rebar3/templates=.
 
 ** Use
-There are three templates:
 - [[file:lfe-app][=lfe-app=]]
 - [[file:lfe-lib][=lfe-lib=]]
 - [[file:lfe-release][=lfe-release=]]
 - [[file:lfe-unit-test][=lfe-unit-test=]]
 
-They all mimic the [[https://github.com/rebar/rebar3/tree/master/priv/templates][default rebar3 templates]].
 #+BEGIN_SRC fish
 rebar3 new lfe-app name=my-new-app
 cd my-new-app
