@@ -1,0 +1,32 @@
+#+OPTIONS: toc:nil
+* LFE Unit Test Template
+#+BEGIN_SRC erlang :tangle lfe-unit-test.template
+%% -*- erlang -*-
+{description, "LFE unit test"}.
+{variables,   [{mod, "module", "Name of the module to test"}]}.
+{template,    "unit-mod-tests.lfe", "test/unit-{{mod}}-tests.lfe"}.
+#+END_SRC
+
+#+BEGIN_SRC lfe :tangle unit-mod-tests.lfe
+(defmodule unit-{{mod}}-tests
+  (doc "`{{mod}}` unit tests")
+  (behaviour ltest-unit)
+  (export all))
+
+(include-lib "ltest/include/ltest-macros.lfe")
+
+(deftest two-plus-two-is-five
+  (is-equal 5 (+ 2 2)))
+#+END_SRC
+
+** Usage
+#+BEGIN_EXAMPLE
+        Description: LFE unit test
+        Variables:
+                mod="module" (Name of the module to test)
+#+END_EXAMPLE
+
+#+BEGIN_SRC fish
+cd project
+rebar3 new lfe-unit-test mod="mod-name"
+#+END_SRC

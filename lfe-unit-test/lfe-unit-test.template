@@ -1,0 +1,4 @@
+%% -*- erlang -*-
+{description, "LFE unit test"}.
+{variables,   [{mod, "module", "Name of the module to test"}]}.
+{template,    "unit-mod-tests.lfe", "test/unit-{{mod}}-tests.lfe"}.
