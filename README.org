@@ -9,7 +9,7 @@ A set of basic =rebar3= templates for LFE applications.
 #+BEGIN_SRC makefile :exports none :tangle Makefile
 # -*- mode: makefile; tab-width: 2 -*-
 
-templates   := $(wildcard lfe-*)
+templates   := $(wildcard lfe-*) common
 destination := $(HOME)/.config/rebar3/templates
 
 install:

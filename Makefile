@@ -1,6 +1,6 @@
 # -*- mode: makefile; tab-width: 2 -*-
 
-templates   := $(wildcard lfe-*)
+templates   := $(wildcard lfe-*) common
 destination := $(HOME)/.config/rebar3/templates
 
 install:
