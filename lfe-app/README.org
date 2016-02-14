@@ -1,0 +1,19 @@
+* {{name}}
+{{desc}}
+
+** Build
+#+BEGIN_SRC fish
+rebar3 compile
+#+END_SRC
+
+
+** Test
+#+BEGIN_SRC fish
+rebar3 eunit
+#+END_SRC
+
+** License
+Copyright (c) {{copyright_year}} {{author_name}}
+
+This work is free. You can redistribute it and/or modify it under the
+terms of the MIT License. See the [[file:LICENSE][LICENSE]] file for more details.

@@ -1,0 +1,20 @@
+%% -*- erlang -*-
+{description, "LFE OTP Application"}.
+{variables,   [ {name, "my_lfe_app",
+                 "Name of the OTP application"}
+              , {desc, "An LFE Application",
+                 "Short description of the app"}
+              , {repo, "A GitHub repo: username/repo",
+                 "USERNAME/REPO"}
+              , {author_name, "Anonymous"}
+              , {copyright_year, "2016",
+                 "The year or range of years for copyright"}]}.
+
+{template, "mod.lfe",                "{{name}}/src/{{name}}.lfe"}.
+{template, "app.lfe",                "{{name}}/src/{{name}}-app.lfe"}.
+{template, "sup.lfe",                "{{name}}/src/{{name}}-sup.lfe"}.
+{template, "app.src",                "{{name}}/src/{{name}}.app.src"}.
+{template, "README.org",             "{{name}}/README.org"}.
+{template, "../common/rebar.config", "{{name}}/rebar.config"}.
+{template, "../common/gitignore",    "{{name}}/.gitignore"}.
+{template, "../common/LICENSE",      "{{name}}/LICENSE"}.
